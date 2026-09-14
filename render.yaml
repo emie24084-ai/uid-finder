@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: group-uid-finder
+    env: node
+    plan: starter          # free tier bhi chalega
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: UF_USER
+        sync: false        # set in dashboard
+      - key: UF_PASS
+        sync: false        # set in dashboard
+      - key: PORT
+        value: 10000       # Render default
+    disk:
+      name: uid-finder-temp
+      mountPath: /opt/render/project/src/temp
+      sizeGB: 1

@@ -1,0 +1,23 @@
+{
+  "name": "group-uid-finder",
+  "version": "2.0.0",
+  "description": "WhatsApp Group UID Finder with member profiles - Web UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "cli": "node uid-finder.js"
+  },
+  "keywords": ["whatsapp", "baileys", "group", "uid", "members"],
+  "author": "WALEED KHAN",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "chalk": "^4.1.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "pino": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
